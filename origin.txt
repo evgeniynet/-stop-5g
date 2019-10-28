@@ -1,0 +1,24 @@
+Uri: http://unbouncepages.com/stop-5g/
+File Name: E:\_Stop_5G\Сайт\TEMP\unbouncepages.com\index.htm
+Content Type: text/html
+
+Uri: http://d9hhrg4mnvzow.cloudfront.net/unbouncepages.com/stop-5g/69ef7cc7-background_000000000000000000001.png
+File Name: E:\_Stop_5G\Сайт\TEMP\unbouncepages.com\69ef7cc7-background_000000000000000000001.png
+Content Type: image/png
+
+Uri: http://d9hhrg4mnvzow.cloudfront.net/unbouncepages.com/stop-5g/69ef7cc7-background_0000000go1bu0uz000001.png
+File Name: E:\_Stop_5G\Сайт\TEMP\unbouncepages.com\69ef7cc7-background_0000000go1bu0uz000001.png
+Content Type: image/png
+
+Uri: http://builder-assets.unbounce.com/published-css/main-7b78720.z.css
+File Name: E:\_Stop_5G\Сайт\TEMP\unbouncepages.com\main-7b78720.z.css
+Content Type: text/css
+
+Uri: http://d9hhrg4mnvzow.cloudfront.net/unbouncepages.com/stop-5g/transparent.gif
+File Name: E:\_Stop_5G\Сайт\TEMP\unbouncepages.com\transparent.gif
+Content Type: image/gif
+
+Uri: http://builder-assets.unbounce.com/published-js/main.bundle-06fd494.z.js
+File Name: E:\_Stop_5G\Сайт\TEMP\unbouncepages.com\main.bundle-06fd494.z.js
+Content Type: application/javascript
+
