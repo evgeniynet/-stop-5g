@@ -1142,17 +1142,138 @@ a {
     width:277px;
   }
 }
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 90px;
+  height: 34px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #161bbf;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #ca2222;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(55px);
+  -ms-transform: translateX(55px);
+  transform: translateX(55px);
+}
+
+/*------ ADDED CSS ---------*/
+.on
+{
+  display: none;
+  color: white;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  font-size: 15px;
+  font-family: Verdana, sans-serif;
+}
+
+.off
+{
+  color: yellow;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  font-size: 15px;
+  font-family: Verdana, sans-serif;
+}
+
+input:checked+ .slider .on
+{display: block;}
+
+input:checked + .slider .off
+{display: none;}
+
+/*--------- END --------*/
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;}
 </style>
 <!-- lp:insertions start head -->
 <link href="main-7b78720.z.css" rel="stylesheet" media="screen" type="text/css">
 <meta property='og:title' content='stop-5g/'>
-<script type="text/javascript">window.ub = {"page":{"id":"33dba063-a0bd-443c-b51a-636801d8c79e","variantId":"a","usedAs":"main","name":"Stop 5G","url":"","dimensions":{"desktop":{"height":2037,"width":940},"mobile":{"height":3975,"width":320},"mobileMaxWidth":600}},"hooks":{"beforeFormSubmit":[],"afterFormSubmit":[]}};</script>
-<script>window.ub.page.webFonts = ['Montserrat:regular,700,italic,700italic'];</script>
 <!-- lp:insertions end head -->
 </head>
-<body class="lp-pom-body ">
+<body class="lp-pom-body">
 <script src="src/sticky-social.js"></script>
     <script>
+    var getFirstBrowserLanguage = function () {
+    var nav = window.navigator,
+    browserLanguagePropertyKeys = ['language', 'browserLanguage', 'systemLanguage', 'userLanguage'],
+    i,
+    language;
+
+    // support for HTML 5.1 "navigator.languages"
+    if (Array.isArray(nav.languages)) {
+      for (i = 0; i < nav.languages.length; i++) {
+        language = nav.languages[i];
+        if (language && language.length) {
+          return language;
+        }
+      }
+    }
+
+    // support for other well known properties in browsers
+    for (i = 0; i < browserLanguagePropertyKeys.length; i++) {
+      language = nav[browserLanguagePropertyKeys[i]];
+      if (language && language.length) {
+        return language;
+      }
+    }
+
+    return null;
+  };
+
+if (!localStorage.redir && /ru/i.test(getFirstBrowserLanguage())) {
+    localStorage.redir = 1;
+  window.location.href = "./index_ru.htm?p=2";
+}
+else {
+
+    window.ub = {"page":{"id":"33dba063-a0bd-443c-b51a-636801d8c79e","variantId":"a","usedAs":"main","name":"Stop 5G","url":"","dimensions":{"desktop":{"height":2037,"width":940},"mobile":{"height":3975,"width":320},"mobileMaxWidth":600}},"hooks":{"beforeFormSubmit":[],"afterFormSubmit":[]}};
+    window.ub.page.webFonts = ['Montserrat:regular,700,italic,700italic'];
         new stickySocial(
             {
                 'viber': 'https://invite.viber.com/?g2=AQBjhMFxM5fcW0o2UXjCkkJ691LWRQNt%2F4qsLEVRpr9fJ19mx5zk5TmKshYw5BLo&lang=ru',
@@ -1170,11 +1291,20 @@ a {
                 //roundedIcons: true
             }
         );
+      }
+        function switchLang() {
+    setTimeout(function(){ 
+
+      window.location.href = "./index_ru.htm?p=2";
+
+}, 1000);
+}
     </script>
 <!-- lp:insertions start body:before -->
 <!-- lp:insertions end body:before -->
 <div class="lp-element lp-pom-root" id="lp-pom-root">
 <div id="lp-pom-root-color-overlay"></div>
+<label class="switch"><input onclick="switchLang()" type="checkbox" id="togBtn"><div class="slider round"><!--ADDED HTML --><span class="on">RU</span><span class="off">UA</span><!--END--></div></label>
 <div class="lp-positioned-content">
 <div class="lp-element lp-pom-text nlh" id="lp-pom-text-11">
 <p class="lplh-26" style="text-align: center;">

@@ -1142,6 +1142,94 @@ a {
     width:277px;
   }
 }
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 90px;
+  height: 34px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #161bbf;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #ca2222;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(55px);
+  -ms-transform: translateX(55px);
+  transform: translateX(55px);
+}
+
+/*------ ADDED CSS ---------*/
+.on
+{
+  display: none;
+  color: white;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  font-size: 15px;
+  font-family: Verdana, sans-serif;
+}
+
+.off
+{
+  color: yellow;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  font-size: 15px;
+  font-family: Verdana, sans-serif;
+}
+
+input:checked+ .slider .on
+{display: block;}
+
+input:checked + .slider .off
+{display: none;}
+
+/*--------- END --------*/
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;}
 </style>
 <!-- lp:insertions start head -->
 <link href="main-7b78720.z.css" rel="stylesheet" media="screen" type="text/css">
@@ -1170,11 +1258,18 @@ a {
                 //roundedIcons: true
             }
         );
+        function switchLang() {
+    setTimeout(function(){ 
+
+      window.location.href = "./index.htm?p=1";
+
+}, 1000); }
     </script>
 <!-- lp:insertions start body:before -->
 <!-- lp:insertions end body:before -->
 <div class="lp-element lp-pom-root" id="lp-pom-root">
 <div id="lp-pom-root-color-overlay"></div>
+<label class="switch"><input checked="checked" onclick="switchLang()" type="checkbox" id="togBtn"><div class="slider round"><!--ADDED HTML --><span class="on">RU</span><span class="off">UA</span><!--END--></div></label>
 <div class="lp-positioned-content">
 <div class="lp-element lp-pom-text nlh" id="lp-pom-text-11">
 <p class="lplh-26" style="text-align: center;">
